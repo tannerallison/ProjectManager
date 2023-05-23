@@ -12,7 +12,7 @@ public sealed class PasswordHash
     public PasswordHash(string password)
     {
         _salt = RandomNumberGenerator.GetBytes(SaltSize);
-        _hash = new Rfc2898DeriveBytes(password, _salt, HashIter, HashAlgorithmName.SHA1).GetBytes(HashSize);
+        _hash = new Rfc2898DeriveBytes(password, _salt, HashIter, HashAlgorithmName.SHA512).GetBytes(HashSize);
     }
 
     public PasswordHash(byte[] hashBytes)

@@ -2,5 +2,5 @@ namespace ProjectManager.Helpers;
 
 public class AppSettings
 {
-    public string Secret { get; set; }
+    public string JwtSecret { get; set; }
 }
