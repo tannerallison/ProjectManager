@@ -1,0 +1,13 @@
+<form *ngIf="project">
+  <div>
+    <label>Project Name</label>
+    <input [(ngModel)]="project.name" name="project-name" placeholder="name"/>
+  </div>
+  <div>
+    <label>Project Description</label>
+    <input [(ngModel)]="project.description" name="project-description" placeholder="description"/>
+  </div>
+  <div>
+    <button (click)="save()">Save</button>
+  </div>
+</form>

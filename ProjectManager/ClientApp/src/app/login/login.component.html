@@ -1,0 +1,10 @@
+<div class="registration-form">
+  <label for="username">Username</label>
+  <input type="text" name="username" id="username" placeholder="Username" required [(ngModel)]="loginData.username">
+  <label for="password">Password</label>
+  <input type="password" name="password" id="password" placeholder="Password" required
+         [(ngModel)]="loginData.password">
+  <button type="submit" name="login" (click)="login()">Login</button>
+</div>
+
+<a [routerLink]="['/account/register']">Register</a>

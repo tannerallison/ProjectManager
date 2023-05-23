@@ -1,8 +1,10 @@
+using Newtonsoft.Json;
+
 namespace ProjectManager.Models;
 
-public class User
+public class User : BaseEntity
 {
-    public Guid Id { get; set; }
     public string Username { get; set; } = null!;
-    public string PasswordHash { get; set; } = null!;
+    [JsonIgnore]
+    public byte[] PasswordHash { get; set; } = null!;
 }

@@ -1,0 +1,11 @@
+<div class="registration-form">
+  <label for="username">Username</label>
+  <input type="text" name="username" id="username" placeholder="Username" required [(ngModel)]="registerData.username">
+  <label for="password">Password</label>
+  <input type="password" name="password" id="password" placeholder="Password" required
+         [(ngModel)]="registerData.password">
+  <label for="password2">Confirm Password</label>
+  <input type="password" name="password2" id="password2" placeholder="Confirm Password" required
+         [(ngModel)]="registerData.confirmPassword">
+  <button type="submit" name="register" (click)="register()">Register</button>
+</div>

@@ -1,1 +1,22 @@
-<p>projects works!</p>
+
+<!-- Table listing all the projects -->
+<table>
+    <thead>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Actions</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let project of projects">
+        <td>{{project.name}}</td>
+        <td>{{project.description}}</td>
+        <td>
+            <button (click)="editProject(project)">Edit</button>
+            <button (click)="deleteProject(project)">Delete</button>
+        </td>
+    </tbody>
+</table>
+
+<button (click)="createProject()">Create</button>
+
+<app-project-edit [project]="projectToEdit" (projectUpdated)="projectUpdated()"></app-project-edit>
